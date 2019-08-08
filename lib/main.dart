@@ -48,7 +48,6 @@ class _PomoState extends State<Pomo> {
       body: _currentPage,
       bottomNavigationBar: BottomNavigationBar(
           onTap: (int index) {
-            debugPrint('$index');
             setState(() {
               _currentIndex = index;
               _currentPage = _pages[_currentIndex];

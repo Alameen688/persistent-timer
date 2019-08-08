@@ -30,7 +30,6 @@ class PomoModel extends ChangeNotifier {
   start() {
     isBreak = false;
     currentTime = PomoModel.SESSION_TIME;
-    debugPrint('run called');
     _run();
   }
 
@@ -65,17 +64,5 @@ class PomoModel extends ChangeNotifier {
       _run();
     }
   }
-  static PomoModel of(BuildContext context) {
-    var provider = context.inheritFromWidgetOfExactType(PomoModelServiceProvider) as PomoModelServiceProvider;
-    return provider.service;
-  }
 }
 
-class PomoModelServiceProvider extends InheritedWidget {
-  const PomoModelServiceProvider({Key key, this.service, Widget child}) : super(key: key, child: child);
-
-  final PomoModel service;
-
-  @override
-  bool updateShouldNotify(PomoModelServiceProvider old) => service != old.service;
-}
