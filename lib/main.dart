@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'lifecycle_manager.dart';
 import 'model/pomo.dart';
 import 'pomo_history.dart';
 import 'pomo_screen.dart';
@@ -13,10 +14,12 @@ void main() => runApp(ChangeNotifierProvider(
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Tabbed Timer',
-      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Iceberg'),
-      home: Pomo(),
+    return AppLifecycleManager(
+      child: MaterialApp(
+        title: 'Tabbed Timer',
+        theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Iceberg'),
+        home: Pomo(),
+      ),
     );
   }
 }

@@ -27,6 +27,7 @@ dependencies:
   fluttery_seekbar: ^0.0.1
   intl: ^0.15.8
   vibrate: ^0.0.4
+  shared_preferences: ^0.5.3+4
 
 dev_dependencies:
   flutter_test:

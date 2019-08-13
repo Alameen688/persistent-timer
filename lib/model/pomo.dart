@@ -54,7 +54,7 @@ class PomoModel extends ChangeNotifier {
     _currentSessionProgress = double.parse(
         ((startTime.inSeconds - currentTime.inSeconds) / startTime.inSeconds)
             .toStringAsFixed(3));
-    debugPrint('getting here');
+//  debugPrint('getting here');
     notifyListeners();
     if (startTime == SESSION_TIME && _currentTime.inSeconds == 0 && !isBreak) {
       if (await Vibrate.canVibrate) Vibrate.vibrate();
